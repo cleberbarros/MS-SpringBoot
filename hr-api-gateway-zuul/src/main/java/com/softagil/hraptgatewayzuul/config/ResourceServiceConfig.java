@@ -21,7 +21,7 @@ public class ResourceServiceConfig extends ResourceServerConfigurerAdapter{
 	//CONFIGURANDO AS ROTAS
 	private static final String[] PUBLIC = { "/api/hr-oauth/oauth/token" };
 	private static final String[] OPERATOR = { "/api/hr-worker/**" };
-	private static final String[] ADMIN = { "/api/hr-payroll/**", "/api/hr-user/**" };
+	private static final String[] ADMIN = { "/api/hr-payroll/**", "/api/hr-user/**", "/actuator/**", "/apt/hr-worker/actuator/**", "/apt/hr-oauth/actuator/**" };
 	
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {

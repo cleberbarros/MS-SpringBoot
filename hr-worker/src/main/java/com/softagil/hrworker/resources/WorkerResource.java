@@ -23,8 +23,7 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping(value = "/workers")
 public class WorkerResource {
 	
-	@Value("${test.config}")
-	private String testConfig;
+
 	
 	@Autowired
 	private Environment env;
@@ -34,7 +33,7 @@ public class WorkerResource {
 	
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfigs(){
-		log.info("CONFIG = "+testConfig);
+//		log.info("CONFIG = "+testConfig);
 		return ResponseEntity.noContent().build(); 		
 	}
 	
@@ -52,11 +51,11 @@ public class WorkerResource {
 		 */		
 		
 		
-		try {
+		/*try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de solicitação fetch</title>
+</head>
+<body>
+  <script>
+    fetch("http://localhost:8765/api/hr-worker/workers", {
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site"
+      },
+      "referrer": "http://localhost:3000",
+      "referrerPolicy": "no-referrer-when-downgrade",
+      "body": null,
+      "method": "GET",
+      "mode": "cors",
+      "credentials": "omit"
+    })
+    .then(response => {
+      console.log(response);
+      // aqui você pode fazer o que quiser com a resposta
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  </script>
+</body>
+</html>
